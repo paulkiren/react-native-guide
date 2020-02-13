@@ -18,12 +18,17 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 * [Package Management w/ NPM](https://github.com/joeyscarim/react-native-cheatsheet#-package-management-w-npm)
 * [Production Ready Packages](https://github.com/joeyscarim/react-native-cheatsheet#-production-ready-packages)
 * [Alternate App Icons (iOS Only)](https://github.com/joeyscarim/react-native-cheatsheet#-alternate-app-icons-ios-only)
-### State Management, Persistance, and Middleware (section under construction 🏗)
-* [Overview]
-* [Redux]
-* [Hooks]
-* [Persistance]
-* [Middleware]
+### Features
+* [Video player](https://github.com/joeyscarim/react-native-cheatsheet#-video-player)
+* [Chromecast](https://github.com/joeyscarim/react-native-cheatsheet#chromecast)
+* [Disable font scaling](https://github.com/joeyscarim/react-native-cheatsheet#disable-font-accessibility-scaling)
+* [Deep linking](https://github.com/joeyscarim/react-native-cheatsheet#disable-font-accessibility-scaling)
+### State Management, Persistance, and Middleware
+* [Overview](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Redux](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Hooks](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Persistance](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Middleware](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
 ### Troubleshooting
 * [Common Errors](https://github.com/joeyscarim/react-native-cheatsheet#-common-errors)
 * [Reset iOS and Android directories](https://github.com/joeyscarim/react-native-cheatsheet#-reset-ios-and-android-directories)
