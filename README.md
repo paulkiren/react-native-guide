@@ -39,14 +39,17 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 # Getting Started
 
 ## 🤔 What is React-Native?
-* React-Native is a framework for building native iOS and Android apps using React. 
+* React-Native is a framework for creating cross-platform native iOS and Android apps using React. One codebase, 2 mobile apps. React-Native is great for apps that **don't rely heavily on low-level API's**. i.e. an AR, VR, Camera, or bluetooth-heavy app would not be a good match for React-Native. 
+* React-Native has some competition, like Flutter. **Currently, I strongly believe that React-Native is the best choice for cross-platform development**. React-Native has a massive community, a ton of support from major players like Facebook, Wix, etc. and is seeing more and more adoption.
+* React-Native gets some hate: https://www.youtube.com/watch?v=NxJCSI7a8wk But always consider the context. React-Native is A+ for a small team making CRUD/more basic apps. It's not designed for YouTube or Instagram to use it fully. 
+* React-Native is **NOT** a hybrid app tool, like Ionic. React-Native apps utilize the device API's via "bridges", instead of using a browser layer like Ionic. This gives React-Native much better performance, and direct access to any and all exposed API's.
+* **Full native is always better**, in terms of flexibilty, performance, and scale. However, time and price need to be addressed also. React-Native has a nice balance of all considerations.
 
 ## 🕵️‍♂️ Docs & Resources 
 * Offical docs & blog: https://facebook.github.io/react-native/
 * Discord: https://www.reactiflux.com/
-* React JS Crash Course - 2019 by Traversy Media: https://www.youtube.com/watch?v=sBws8MSXN7A
-* React Native Crash Course by Traversy Media: https://www.youtube.com/watch?v=mkualZPRZCs
 * (NEW!) React Native Crash Course 2020 by Travery Media: https://www.youtube.com/watch?v=Hf4MJH0jDb4
+* React JS Crash Course - 2019 by Traversy Media: https://www.youtube.com/watch?v=sBws8MSXN7A
 
 ## react-native-init vs. Expo
 * react-native-init
@@ -55,11 +58,12 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 - No IAP, bluetooth, etc. support
 - Must be connected to internet while developing
 - Doesn't support "linked" packages (some third party packages can't be used)
+* **The bottom line:** Expo is awesome, but its not ready for production use yet.
 
 ## 🚧 Project Setup & Structure
 * Create a project:
 ``` 
-react-native init MyAppName
+npx react-native init MyAppName
 ```
 * Project structure: 
 ```
