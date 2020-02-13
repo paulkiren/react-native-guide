@@ -349,18 +349,18 @@ Other options:
   * https://facebook.github.io/react-native/docs/upgrading
   
 ## Chromecast
-Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4
+Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4. 
 Note: These instructions are for the v4 branch.
 
 **Install package:**
-`npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`
+`npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`. 
 Make sure the `ios` and `android` directories are both in the `node_modules/react-native-google-cast` directory. If they aren't, manually add them.
 
 **iOS setup:**
-Add pod:
-`pod 'react-native-google-cast/NoBluetooth', path: '../node_modules/react-native-google-cast/ios/`
-Pod install:
-`cd ios && pod install && cd ..`
+Add pod:  
+`pod 'react-native-google-cast/NoBluetooth', path: '../node_modules/react-native-google-cast/ios/`  
+Pod install:  
+`cd ios && pod install && cd ..`. 
 
 In `AppDelegate.m` add:
 
