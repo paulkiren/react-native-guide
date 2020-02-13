@@ -347,6 +347,123 @@ Other options:
   * https://react-native-community.github.io/upgrade-helper/
 * Upgrade guide
   * https://facebook.github.io/react-native/docs/upgrading
+  
+## Chromecast
+Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4
+Note: These instructions are for the v4 branch.
+
+**Install package:**
+`npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`
+Make sure the `ios` and `android` directories are both in the `node_modules/react-native-google-cast` directory. If they aren't, manually add them.
+
+**iOS setup:**
+Add pod:
+`pod 'react-native-google-cast/NoBluetooth', path: '../node_modules/react-native-google-cast/ios/`
+Pod install:
+`cd ios && pod install && cd ..`
+
+In `AppDelegate.m` add:
+
+`#import <GoogleCast/GoogleCast.h>`
+and
+```
+GCKDiscoveryCriteria *criteria = [[GCKDiscoveryCriteria alloc] initWithApplicationID:kGCKDefaultMediaReceiverApplicationID];
+GCKCastOptions* options = [[GCKCastOptions alloc] initWithDiscoveryCriteria:criteria];
+[GCKCastContext setSharedInstanceWithOptions:options];
+```
+
+**Android setup:**
+in app/build.gradle dependencies, add:
+```
+    implementation "com.google.android.gms:play-services-cast-framework:+"
+
+   implementation project(':react-native-google-cast')
+   ```
+   
+In android Manifest add:
+```
+ <meta-data
+        android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+        android:value="com.reactnative.googlecast.GoogleCastOptionsProvider" />
+```
+
+In settings.gradle add:
+```include ':react-native-google-cast'
+project(':react-native-google-cast').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-cast/android')
+```
+
+in MainActivity add:
+```
+import android.os.Bundle;
+import androidx.annotation.Nullable;
+import com.google.android.gms.cast.framework.CastContext;
+```
+
+```
+    @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    // lazy load Google Cast context
+    CastContext.getSharedInstance(this);
+  }
+  ```
+
+Javascript:
+Simple test:
+```
+import GoogleCast, {
+  CastButton,
+  RemoteMediaClient,
+} from 'react-native-google-cast';
+```
+
+```
+ <CastButton style={{width: 24, height: 24}} />
+            <TouchableOpacity
+              onPress={() => {
+                RemoteMediaClient.getCurrent()
+                  .loadMedia(
+                    {
+                      contentUrl:
+                        'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4',
+                      metadata: {
+                        images: [
+                          {
+                            url:
+                              'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg',
+                            width: 480,
+                            height: 270,
+                          },
+                          {
+                            url:
+                              'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg',
+                            width: 780,
+                            height: 1200,
+                          },
+                        ],
+                        subtitle:
+                          'A large and lovable rabbit deals with three tiny bullies, led by a flying squirrel, who are determined to squelch his happiness.',
+                        title: 'Big Buck Bunny',
+                        type: 'movie',
+                      },
+                      streamDuration: 596,
+                    },
+                    {autoplay: true},
+                  )
+                  .then(console.log)
+                  .catch(console.warn);
+              }}>
+              <Text>CAST!</Text>
+            </TouchableOpacity>
+```
+	   
+This is currently working for me on iOS, but im getting an error when i call 'loadMedia' on Android. Bug report here:
+https://github.com/react-native-google-cast/react-native-google-cast/issues/175
+
+   
+  
+
 
 ## 📼 Video Player
 Note: This setup is based on a portrait only app, with fullscreen video playback in landscape only (android) or landscape + portrait options (ios)
