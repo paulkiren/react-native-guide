@@ -53,7 +53,7 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 
 ## react-native-init vs. Expo
 * react-native-init
-- Full react-native experience
+	- Full react-native experience
 * Expo has limitations: https://docs.expo.io/versions/latest/introduction/why-not-expo/
 - No IAP, bluetooth, etc. support
 - Must be connected to internet while developing
