@@ -55,12 +55,12 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 * react-native-init:
 	- The "normal" way to create a react-native app
 	- Full react-native experience
-* Expo 
+* Expo:
 	- has limitations: https://docs.expo.io/versions/latest/introduction/why-not-expo/
 	- No IAP, bluetooth, etc. support
 	- Must be connected to internet while developing
 	- Doesn't support "linked" packages (some third party packages can't be used)
-* **The bottom line:** Expo is awesome, but its not ready for production use yet.
+* **The bottom line:** Expo is awesome, but its not ready for most production use yet.
 
 ## 🚧 Project Setup & Structure
 * Create a project:
