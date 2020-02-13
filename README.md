@@ -14,25 +14,28 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 * [Tooling](https://github.com/joeyscarim/react-native-cheatsheet#-common-js--es6-concepts)
 * [Dev Environment](https://github.com/joeyscarim/react-native-cheatsheet#-dev-environment)
 * [Bash Scripts](https://github.com/joeyscarim/react-native-cheatsheet#-bash-scripts)
+* [Debugging]
+* [Testing]
+### React Concepts, State Management, Middleware
+* [Hooks](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Redux](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Persistance](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Middleware](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
 ### Packages
+* [Yarn vs. NPM]
 * [Package Management w/ NPM](https://github.com/joeyscarim/react-native-cheatsheet#-package-management-w-npm)
 * [Production Ready Packages](https://github.com/joeyscarim/react-native-cheatsheet#-production-ready-packages)
-* [Alternate App Icons (iOS Only)](https://github.com/joeyscarim/react-native-cheatsheet#-alternate-app-icons-ios-only)
 ### Features
+* [Push notifications]
 * [Video player](https://github.com/joeyscarim/react-native-cheatsheet#-video-player)
 * [Chromecast](https://github.com/joeyscarim/react-native-cheatsheet#chromecast)
 * [Disable font scaling](https://github.com/joeyscarim/react-native-cheatsheet#disable-font-accessibility-scaling)
 * [Deep linking](https://github.com/joeyscarim/react-native-cheatsheet#disable-font-accessibility-scaling)
-### State Management, Persistance, and Middleware
-* [Overview](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
-* [Redux](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
-* [Hooks](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
-* [Persistance](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
-* [Middleware](https://github.com/joeyscarim/react-native-cheatsheet#-state-management-persistance-and-middleware)
+* [Alternate App Icons (iOS Only)](https://github.com/joeyscarim/react-native-cheatsheet#-alternate-app-icons-ios-only)
 ### Troubleshooting
 * [Common Errors](https://github.com/joeyscarim/react-native-cheatsheet#-common-errors)
 * [Reset iOS and Android directories](https://github.com/joeyscarim/react-native-cheatsheet#-reset-ios-and-android-directories)
-### Testing & Publishing 
+### Publishing 
 * [Icons & App Store Images](https://github.com/joeyscarim/react-native-cheatsheet#-icons--app-store-images)
 * [Testing](https://github.com/joeyscarim/react-native-cheatsheet#-testing)
 
@@ -50,7 +53,8 @@ A cheat sheet for building production-ready react-native apps, based on my perso
 * Discord: https://www.reactiflux.com/
 * **(NEW!)** React Native Crash Course 2020 by Travery Media: https://www.youtube.com/watch?v=Hf4MJH0jDb4
 * React JS Crash Course - 2019 by Traversy Media: https://www.youtube.com/watch?v=sBws8MSXN7A
-
+* General resources:
+	- Flexbox guide: https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c
 ## react-native-init vs. Expo
 * react-native-init:
 	- The "normal" way to create a react-native app
@@ -202,7 +206,7 @@ promise.then((result) => {
 import { Platform, Linking } from 'react-native';
 ```
 
-# React Concepts (work in progress)
+# React Concepts
 
 ## Hooks
 Function components come with no state at all, but the useState hook allows us to add little nuggets of state as we need them. So if all we need is a single boolean, we can create a bit of state to hold that.
@@ -360,9 +364,9 @@ Other options:
   * https://facebook.github.io/react-native/docs/upgrading
   
 
-   
-  
+# Features
 
+## 🎵 Push Notifications
 
 ## 📼 Video Player
 Note: This setup is based on a portrait only app, with fullscreen video playback in landscape only (android) or landscape + portrait options (ios)
@@ -648,7 +652,7 @@ Icons:
 # UI, UX, Styling
 
 ## Resources
-* Flexbox guide: https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c
+* 
 
 # Troubleshooting
 
