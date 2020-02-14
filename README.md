@@ -1,5 +1,5 @@
 # react-native-cheatsheet
-A cheat sheet for building production-ready react-native apps, based on my personal notes.
+A cheat sheet for building production-ready react-native apps, based on my personal notes.\
 ‼️ This is a forever-work-in-progress. don't be suprised if things are out of place or broken.
 
 ## 📓 Table of Contents
