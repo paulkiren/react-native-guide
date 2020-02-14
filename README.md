@@ -430,8 +430,8 @@ Android setup:
 * For fullscreen to work, you also need to either play the video on a fullsize page, or update your view to be fullsize when you enter fullscreen mode.
 
 ## 📺 Chromecast
-Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4<br/>
-Note: These instructions are for the v4 branch.
+Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4<br/><br/><br/>
+Note: These instructions are for the v4 branch.<br/><br/><br/>
 
 **Install package:**
 `npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`<br/>
