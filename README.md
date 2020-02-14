@@ -434,13 +434,13 @@ Android setup:
 Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4
 **Note:** These instructions are for the v4 branch.
 
-**Install package:**
+### Install package:
 
 `npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`
 
 Make sure the `ios` and `android` directories are both in the `node_modules/react-native-google-cast` directory. If they aren't, manually add them.
 
-**iOS setup:**
+### iOS setup:
 
 Add pod:<br/>
 `pod 'react-native-google-cast/NoBluetooth', path: '../node_modules/react-native-google-cast/ios/`  
@@ -448,7 +448,7 @@ Add pod:<br/>
 Pod install:\
 `cd ios && pod install && cd ..`. 
 
-In `AppDelegate.m` add:
+In `AppDelegate.m` add:\
 `#import <GoogleCast/GoogleCast.h>`
 and
 ```
@@ -457,7 +457,7 @@ GCKCastOptions* options = [[GCKCastOptions alloc] initWithDiscoveryCriteria:crit
 [GCKCastContext setSharedInstanceWithOptions:options];
 ```
 
-**Android setup:**
+### Android setup:
 in app/build.gradle dependencies, add:
 ```
     implementation "com.google.android.gms:play-services-cast-framework:+"
@@ -494,7 +494,7 @@ import com.google.android.gms.cast.framework.CastContext;
   }
   ```
 
-Javascript:
+### Javascript:
 Simple test:
 ```
 import GoogleCast, {
@@ -543,7 +543,7 @@ import GoogleCast, {
             </TouchableOpacity>
 ```
 	   
-This is currently working for me on iOS, but im getting an error when i call 'loadMedia' on Android. Bug report here:
+**NOTE:** This is currently working for me on iOS, but im getting an error when i call 'loadMedia' on Android. Bug report here:
 https://github.com/react-native-google-cast/react-native-google-cast/issues/175
 
 
