@@ -430,19 +430,19 @@ Android setup:
 * For fullscreen to work, you also need to either play the video on a fullsize page, or update your view to be fullsize when you enter fullscreen mode.
 
 ## 📺 Chromecast
-Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4. 
+Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4<br/>
 Note: These instructions are for the v4 branch.
 
 **Install package:**
-`npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`
+`npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`<br/>
 
 Make sure the `ios` and `android` directories are both in the `node_modules/react-native-google-cast` directory. If they aren't, manually add them.
 
 **iOS setup:**
-Add pod:  
+Add pod:<br/>
 `pod 'react-native-google-cast/NoBluetooth', path: '../node_modules/react-native-google-cast/ios/`  
 
-Pod install:  
+Pod install:<br/>  
 `cd ios && pod install && cd ..`. 
 
 In `AppDelegate.m` add:
