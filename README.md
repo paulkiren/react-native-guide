@@ -466,12 +466,13 @@ in app/build.gradle dependencies, add:
    implementation project(':react-native-google-cast')
    ```
    
-   Main application:
-* Add import com.reactnative.googlecast.GoogleCastPackage; to the imports at the top of the file
+Main application:
+```
+import com.reactnative.googlecast.GoogleCastPackage; to the imports at the top of the file
+```
 
-
-   Android build.grade:
-   ` castFrameworkVersion = '16.1.2'`
+Android build.grade:
+` castFrameworkVersion = '16.1.2'`
     
 In android Manifest add:
 ```
@@ -488,7 +489,6 @@ project(':react-native-google-cast').projectDir = new File(rootProject.projectDi
 in MainActivity add:
 ```
 import com.facebook.react.GoogleCastActivity;
-
 ```
 
 ```
@@ -496,6 +496,7 @@ public class MainActivity extends GoogleCastActivity {
   // ..
 }
   ```
+  Not sure if this will work with react-navigation yet
 
 ### Javascript:
 coming sooon
