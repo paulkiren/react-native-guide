@@ -432,14 +432,15 @@ Android setup:
 
 ## 📺 Chromecast
 
-Setup instructions for: https://github.com/react-native-google-cast/react-native-google-cast/tree/v4
-**Note:** These instructions are for the v4 branch.
+Package: https://github.com/react-native-google-cast/react-native-google-cast
 
-### Install package:
 
-`npm install git://github.com/react-native-google-cast/react-native-google-cast.git#v4 --save`
+### Install and link package:
 
-Make sure the `ios` and `android` directories are both in the `node_modules/react-native-google-cast` directory. If they aren't, manually add them.
+```
+npm install react-native-google-cast
+react-native link react-native-google-cast
+```
 
 ### iOS setup:
 
@@ -461,11 +462,17 @@ GCKCastOptions* options = [[GCKCastOptions alloc] initWithDiscoveryCriteria:crit
 ### Android setup:
 in app/build.gradle dependencies, add:
 ```
-    implementation "com.google.android.gms:play-services-cast-framework:+"
-
+    implementation "com.google.android.gms:play-services-cast-framework:${rootProject.ext.castFrameworkVersion}"
    implementation project(':react-native-google-cast')
    ```
    
+   Main application:
+* Add import com.reactnative.googlecast.GoogleCastPackage; to the imports at the top of the file
+
+
+   Android build.grade:
+   ` castFrameworkVersion = '16.1.2'`
+    
 In android Manifest add:
 ```
  <meta-data
@@ -480,72 +487,20 @@ project(':react-native-google-cast').projectDir = new File(rootProject.projectDi
 
 in MainActivity add:
 ```
-import android.os.Bundle;
-import androidx.annotation.Nullable;
-import com.google.android.gms.cast.framework.CastContext;
+import com.facebook.react.GoogleCastActivity;
+
 ```
 
 ```
-    @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    // lazy load Google Cast context
-    CastContext.getSharedInstance(this);
-  }
+public class MainActivity extends GoogleCastActivity {
+  // ..
+}
   ```
 
 ### Javascript:
-Simple test:
-```
-import GoogleCast, {
-  CastButton,
-  RemoteMediaClient,
-} from 'react-native-google-cast';
-```
-
-```
- <CastButton style={{width: 24, height: 24}} />
-            <TouchableOpacity
-              onPress={() => {
-                RemoteMediaClient.getCurrent()
-                  .loadMedia(
-                    {
-                      contentUrl:
-                        'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4',
-                      metadata: {
-                        images: [
-                          {
-                            url:
-                              'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg',
-                            width: 480,
-                            height: 270,
-                          },
-                          {
-                            url:
-                              'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg',
-                            width: 780,
-                            height: 1200,
-                          },
-                        ],
-                        subtitle:
-                          'A large and lovable rabbit deals with three tiny bullies, led by a flying squirrel, who are determined to squelch his happiness.',
-                        title: 'Big Buck Bunny',
-                        type: 'movie',
-                      },
-                      streamDuration: 596,
-                    },
-                    {autoplay: true},
-                  )
-                  .then(console.log)
-                  .catch(console.warn);
-              }}>
-              <Text>CAST!</Text>
-            </TouchableOpacity>
-```
+coming sooon
 	   
-**NOTE:** This is currently working for me on iOS, but im getting an error when i call 'loadMedia' on Android. Bug report here:
-https://github.com/react-native-google-cast/react-native-google-cast/issues/175
+
 
 
 ## disable font accessibility scaling
