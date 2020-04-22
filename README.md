@@ -595,14 +595,15 @@ TextInput.defaultProps.allowFontScaling = false;
 ```
 
 ## 🏙 Production Ready Packages
+- Modals: react-native-modal, https://github.com/react-native-community/react-native-modal
+- IAP: react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
+- Crash Reporting: Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage
+- Dynamic Links:
+- Analytics:
+- FB-SDK
+- Forms: formit, https://github.com/jaredpalmer/formik
 
-- Formik
-  - Stateless forms
-  - Docs: https://github.com/jaredpalmer/formik
 
-```
-npm install formik --save
-```
 
 - Native Base: https://github.com/GeekyAnts/NativeBase
 
