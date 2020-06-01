@@ -394,12 +394,8 @@ In Redux, you have a single "store" that houses all of your data, and data alway
 
 Packages:
 
-* https://github.com/kimxogus/react-native-version-check
-* React-native-shared-elements
-* https://github.com/tinycreative/react-native-intercom
-    * Embed intercom help center!
-* React-native-snap-carousel
-* React-native-tab-view
+
+
 
 
 - redux for global state management
@@ -621,7 +617,16 @@ TextInput.defaultProps.allowFontScaling = false;
 - FB-SDK
 - Forms: formit, https://github.com/jaredpalmer/formik
 
+https://github.com/kimxogus/react-native-version-check
+* React-native-shared-elements
+* https://github.com/tinycreative/react-native-intercom
+    * Embed intercom help center!
+* React-native-snap-carousel
+* React-native-tab-view
 
+Forms:
+Redux-form
+Formik
 
 - Native Base: https://github.com/GeekyAnts/NativeBase
 
