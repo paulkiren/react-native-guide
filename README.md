@@ -332,6 +332,16 @@ My preferred tools for React-Native development:
 4. Shake the device or `adb shell input keyevent KEYCODE_MENU` to display the developer menu
 5. React Native Debugger will work like normal with the connected device
 
+## 🐳 Debugging with Flipper
+* Facebook’s new mobile app debugger is called Flipper: https://fbflipper.com/
+* It replaces react-native-debugger/Reactotron for logging, crash reporting, viewing hooks state, and inspecting redux stores.
+	* It can also launch Android emulators easily without needing to launch Android Studio or using `adb` commands in Terminal
+* Flipper is automatically installed with React-Native 0.62+
+* For redux support, install `flipper-plugin-reduxinspector`: https://classic.yarnpkg.com/en/package/flipper-plugin-reduxinspector
+	* Install it via Flipper: View —> Manage Plugins… —> Install Plugins —> redux inspector —> install
+	* You can install other Flipper plugins this way too
+	* If Flipper doesn’t display redux stores: in the simulator close the app fully -> reopen it
+
 ## 📈 Bash Scripts
 
 The bash scripts I use to speed up my development
