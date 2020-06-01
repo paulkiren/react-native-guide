@@ -394,6 +394,14 @@ In Redux, you have a single "store" that houses all of your data, and data alway
 
 Packages:
 
+* https://github.com/kimxogus/react-native-version-check
+* React-native-shared-elements
+* https://github.com/tinycreative/react-native-intercom
+    * Embed intercom help center!
+* React-native-snap-carousel
+* React-native-tab-view
+
+
 - redux for global state management
   - https://github.com/reduxjs/redux
 - react-redux for react + redux bindings
