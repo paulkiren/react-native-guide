@@ -342,6 +342,31 @@ My preferred tools for React-Native development:
 	* You can install other Flipper plugins this way too
 	* If Flipper doesn’t display redux stores: in the simulator close the app fully -> reopen it
 
+## 👥 FB-SDK
+
+**Setup + Install:**
+* Create FB app first: 
+* Install the package:
+* https://github.com/facebook/react-native-fbsdk
+* Follow the quickstarts:
+* https://developers.facebook.com/quickstarts
+
+Analytics:
+```
+import { AppEventsLogger } from "react-native-fbsdk";
+AppEventsLogger.logPurchase(15, "USD", { param: "value" });
+AppEventsLogger.logEvent('battledAnOrc');
+```
+* https://developers.facebook.com/docs/app-events/best-practices
+* https://developers.facebook.com/docs/react-native/app-events/
+
+
+**Testing:**
+* Test at: 
+* https://www.facebook.com/events_manager
+* And 
+* https://www.facebook.com/analytics
+
 ## 📈 Bash Scripts
 
 The bash scripts I use to speed up my development
@@ -394,7 +419,7 @@ In Redux, you have a single "store" that houses all of your data, and data alway
 
 Packages:
 
-
+Note: I now use redux-toolkit.
 
 
 
