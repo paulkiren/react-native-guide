@@ -687,6 +687,7 @@ Adding Custom Fonts:
 	- Victory Native
 	- react-native-tab-view
 	- React-native-shared-elements
+		- react-navigation-shared-element instead?
 	- ⭐️ React-native-elements
 	- ⭐️ styled-components 
 	- ⭐️ expo action sheet 
@@ -713,7 +714,24 @@ Adding Custom Fonts:
 	* ⭐️ react-native-video
 * Send intents/communication
 	* expo-sms
+	* react-native-send-intent
 
+
+### Firebase Analytics
+1. Base setup
+    1. Follow instructions at https://rnfirebase.io/
+2. Install Analytics 
+    1. Guide at https://rnfirebase.io/analytics/usage
+    2. Setup tracking:
+* Setup Events with custom parameters reporting
+	* In firebase or google analytics, go to events -> highlight event —> press menu (3 dots) icon far right -> edit parameter reporting -> choose the parameter -> choose type text -> hit save
+
+### Cocoapods errors
+* Delete the offending npm package in package.json and node_modules
+* delete the Pods folder
+* Delete the pod lock file
+* npm install the packages again
+* pod install
 ## Deep linking
 
 - Basic vs Deferred
