@@ -650,9 +650,11 @@ TextInput.defaultProps = TextInput.defaultProps || {};
 TextInput.defaultProps.allowFontScaling = false;
 ```
 
+Adding Custom Fonts:
+* https://github.com/facebook/react-native/issues/25852
 ## 🏙 Production Ready Packages
 - Modals: 
-	- react-native-modal, https://github.com/react-native-community/react-native-modal
+	- ⭐️ react-native-modal, https://github.com/react-native-community/react-native-modal
 - IAP:
 	- react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
 	- react-native-iap
@@ -660,74 +662,47 @@ TextInput.defaultProps.allowFontScaling = false;
 	- Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage
 	- BugSnag
 - Dynamic Links
-	- Firebase Dynamic Links
+	- ⭐️ Firebase Dynamic Links
 	- Branch.io
 - Analytics
-	- Firebase Analytics
+	- ⭐️ Firebase Analytics
 - FB-SDK
 - Forms: 
-	- formik: https://github.com/jaredpalmer/formik
+	- ⭐️ formik: https://github.com/jaredpalmer/formik
 	- react-hooks-form:
 - Push Notifcations
-	- OneSignal
+	- ⭐️ OneSignal
 	- PushWoosh
 	- AWS service?
-
-https://github.com/kimxogus/react-native-version-check
-* React-native-shared-elements
-* https://github.com/tinycreative/react-native-intercom
-    * Embed intercom help center!
-* React-native-snap-carousel
-* React-native-tab-view
-
-Forms:
-Redux-form
-Formik
-
-- Native Base: https://github.com/GeekyAnts/NativeBase
-
-```
-npm install native-base --save
-react-native link
-```
-
-- React Navigation
-
-```
-npm install --save react-navigation
-npm install --save react-native-gesture-handler@~1.0.14
-react-native link react-native-gesture-handler
-// + Android steps at: https://reactnavigation.org/docs/en/getting-started.html
-```
-
-- One Signal: https://github.com/geektimecoil/react-native-onesignal
-
-```
-npm install --save react-native-onesignal
-react-native link react-native-onesignal
-// + Android steps at: https://documentation.onesignal.com/v5.0/docs/react-native-sdk-setup
-```
-
-- Moment + React-Moment: https://github.com/headzoo/react-moment#readme
-
-```
-npm install --save moment react-moment
-```
-
-- React Native Snap Carousel
-- React Native Circular Progress
-- Victory Native
-- React Native Fast Image (for image caching)
-- React-native-elements
-- styled-components
-- https://www.npmjs.com/package/react-native-dark-mode
-- https://github.com/expo/react-native-appearance
-
-* Animation
-
-- Pose
-- Spring
-- Animatable
+- Forms
+	- Redux-form
+	- Formik
+- UI
+	- Native-Base: https://github.com/GeekyAnts/NativeBase
+	- react-native-splash-screen
+	- ⭐️ React Native Snap Carousel
+	- React Native Circular Progress
+	- Victory Native
+	- react-native-tab-view
+	- React-native-shared-elements
+	- ⭐️ React-native-elements
+	- ⭐️ styled-components 
+- Animation
+	- react-native-shared-element
+	- Pose
+	- Spring
+	- Animatable
+- Navigation
+	- ⭐️ react-navigation
+- Dates
+	- ⭐️ date-fns
+	- react-moment: https://github.com/headzoo/react-moment#readme
+- Embeddables
+	- react-native-intercom: https://github.com/tinycreative/react-native-intercom
+	- typeform:
+- Performance
+	- https://github.com/kimxogus/react-native-version-check
+	* React Native Fast Image (for image caching)
 
 ## Deep linking
 
