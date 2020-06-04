@@ -656,7 +656,7 @@ Adding Custom Fonts:
 - Modals: 
 	- ⭐️ react-native-modal, https://github.com/react-native-community/react-native-modal
 - IAP:
-	- react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
+	- ⭐️ react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
 	- react-native-iap
 - Crash Reporting: 
 	- Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage
@@ -676,7 +676,9 @@ Adding Custom Fonts:
 	- AWS service?
 - Forms
 	- Redux-form
-	- Formik
+		- useful if you want to persist forms in a reducer!
+	- ⭐️ Formik
+	- ⭐️ react-hook-form
 - UI
 	- Native-Base: https://github.com/GeekyAnts/NativeBase
 	- react-native-splash-screen
@@ -687,6 +689,7 @@ Adding Custom Fonts:
 	- React-native-shared-elements
 	- ⭐️ React-native-elements
 	- ⭐️ styled-components 
+	- ⭐️ expo action sheet 
 - Animation
 	- react-native-shared-element
 	- Pose
@@ -702,7 +705,14 @@ Adding Custom Fonts:
 	- typeform:
 - Performance
 	- https://github.com/kimxogus/react-native-version-check
-	* React Native Fast Image (for image caching)
+	* ⭐️ React Native Fast Image (for image caching)
+* Redux
+	* ⭐️ Redux-toolkit
+	* ⭐️ Redux-persist
+* Video player
+	* ⭐️ react-native-video
+* Send intents/communication
+	* expo-sms
 
 ## Deep linking
 
