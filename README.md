@@ -71,6 +71,7 @@ A guide for building production-ready react-native apps, based on my personal no
 - **(NEW!)** React Native Crash Course 2020 by Travery Media: https://www.youtube.com/watch?v=Hf4MJH0jDb4
 - React JS Crash Course - 2019 by Traversy Media: https://www.youtube.com/watch?v=sBws8MSXN7A
 - General resources: - Flexbox guide: https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c
+- Shadow generator: https://ethercreative.github.io/react-native-shadow-generator/
 
 ## react-native-init vs. Expo
 
@@ -450,6 +451,22 @@ Redux resources:
 
 - What is Redux? https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
 - Redux Crash Course With React by Traversy Media: https://www.youtube.com/watch?v=93p3LxR9xfM
+
+
+### When to use redux?
+- use local state for data that doesn’t matter to the app globally
+- use redux for everything else
+- do whatever is less awkward and works for you
+
+## why I used redux
+- pass state between components
+- for fetching data from API & storing it (eg. redux-saga or redux-thunk)
+- for storing forms (eg. redux form)
+## when I dont use redux
+- use formik for forms: form data is local state, not a global store
+- when using Apollo or graphQL: data fetching from api's & REST  is less common place, especially now with apollo, graphql
+- unstated or react context are really simple alternatives for smaller state
+- redux is still optional, available where it makes sense (ie. complex, very large, global state)
 
 Other options:
 
