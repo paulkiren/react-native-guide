@@ -651,13 +651,27 @@ TextInput.defaultProps.allowFontScaling = false;
 ```
 
 ## 🏙 Production Ready Packages
-- Modals: react-native-modal, https://github.com/react-native-community/react-native-modal
-- IAP: react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
-- Crash Reporting: Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage
-- Dynamic Links:
-- Analytics:
+- Modals: 
+	- react-native-modal, https://github.com/react-native-community/react-native-modal
+- IAP:
+	- react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
+	- react-native-iap
+- Crash Reporting: 
+	- Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage
+	- BugSnag
+- Dynamic Links
+	- Firebase Dynamic Links
+	- Branch.io
+- Analytics
+	- Firebase Analytics
 - FB-SDK
-- Forms: formit, https://github.com/jaredpalmer/formik
+- Forms: 
+	- formik: https://github.com/jaredpalmer/formik
+	- react-hooks-form:
+- Push Notifcations
+	- OneSignal
+	- PushWoosh
+	- AWS service?
 
 https://github.com/kimxogus/react-native-version-check
 * React-native-shared-elements
