@@ -738,6 +738,17 @@ Adding Custom Fonts:
 * npm install the packages again
 * pod install
 
+# Firebase dynamic links
+
+To clear cache:
+* Delete the app from the device
+    * Clear Safari web content, history and cookies (Settings > Safari > Clear History and Website Data)
+    * Reset the device's IDFA (Settings > Privacy > Advertising > Reset Advertising Identifier...)
+
+To make post request from server:
+* POST request docs:
+* https://firebase.google.com/docs/dynamic-links/rest
+* https://firebase.google.com/docs/reference/dynamic-links/link-shortener
 
 ## Deep linking
 
