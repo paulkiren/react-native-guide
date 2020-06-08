@@ -485,6 +485,10 @@ Other options:
 
 # Features
 
+### ☀️ Light/Dark/Custom Theming
+useColorScheme: https://reactnative.dev/docs/usecolorscheme
+Appearance: https://reactnative.dev/docs/appearance
+
 ## 🎵 Push Notifications
 
 ## 📼 Video Player
@@ -633,9 +637,7 @@ public class MainActivity extends GoogleCastActivity {
 
 Not sure if this will work with react-navigation yet
 
-### Javascript:
 
-coming sooon
 
 ## disable font accessibility scaling
 
@@ -652,6 +654,7 @@ TextInput.defaultProps.allowFontScaling = false;
 
 Adding Custom Fonts:
 * https://github.com/facebook/react-native/issues/25852
+
 ## 🏙 Production Ready Packages
 - Modals: 
 	- ⭐️ react-native-modal, https://github.com/react-native-community/react-native-modal
@@ -691,6 +694,8 @@ Adding Custom Fonts:
 	- ⭐️ React-native-elements
 	- ⭐️ styled-components 
 	- ⭐️ expo action sheet 
+	- react-native-enhanced-popup-menu
+	- fluid transitions for react navigation
 - Animation
 	- react-native-shared-element
 	- Pose
@@ -732,6 +737,8 @@ Adding Custom Fonts:
 * Delete the pod lock file
 * npm install the packages again
 * pod install
+
+
 ## Deep linking
 
 - Basic vs Deferred
@@ -793,7 +800,7 @@ Icons:
 
 ## Resources
 
--
+- Storybook
 
 # Troubleshooting
 
@@ -842,6 +849,16 @@ Virtual Real-Device testing:
 - Android, Firebase Test Lab (Free): https://firebase.google.com/docs/test-lab/
 - iOS and Android, BrowserStack Interactive Mobile App Testing (Paid, free trial): https://www.browserstack.com/app-live
 - iOS, Testflight
+
+# Release iOS and android app at same time
+1. Submit iOS app + App Store content to Apple with manual release
+2. Submit Android App Store content to Google with timed release
+3. Wait for Apple to approve iOS submission (typically 1-3 days, IAP makes it longer)
+4. Submit Android app to Google, may be instant or may be flagged for manual review (no timed release option here)
+5. Wait for Android app to go live / be manually reviewed (typically 1 day for updates, 3-7 days for new submissions, and can be longer if contains IAP)
+6. Set iOS manual release live
+7. All live, rollouts will take a few hours for both stores
+8. Congrats 🎉
 
 ## Testing with Jest
 
