@@ -696,6 +696,7 @@ Adding Custom Fonts:
 	- ⭐️ expo action sheet 
 	- react-native-enhanced-popup-menu
 	- fluid transitions for react navigation
+	- Uppy: https://uppy.io//docs/react/native/
 - Animation
 	- react-native-shared-element
 	- Pose
