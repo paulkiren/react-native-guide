@@ -773,6 +773,48 @@ Deep link launch, works with:
 
 - adb shell am start -a android.intent.action.VIEW -d "appname://pagename" com.appname
 
+
+# RN Update Process
+### Two choices: 
+1. Approach 1: Manual update using react-native-upgrade-helper
+2. Approach 2: Create new project, `npm install`, move individual platform files over
+	1. Currently, I prefer this approach. Manually updating tends to take almost the same amount of time, and I’ve always run into errors. 
+
+### Approach 1: Manual update
+1. Go to https://react-native-community.github.io/upgrade-helper/
+2. Choose your to/from versions
+3. Follow the steps
+4. Take note to use your project name in place of `RnDiffApp`
+5. Note that some updates are significantly harder to do this way than others. **Most times when doing a major update approach 2 will be easier!**
+
+### Approach 2: Create new project and move over:
+1. Move current project directory to a temp directory
+2. `npx react-native init ProjectNameApp` in projects directory
+3. Move over `app.js`, `src` dir, and `package.json` dependencies (EXCEPT react and react-native!)
+4. `npm install`
+5. iOS setup:
+    1. Move over image assets and firebase config file (if applicable)
+    2. update `AppDelegate.m`, `Appdelegate.h` and `Podfile`
+    3. `cd iOS && npx pod install`
+    4. `npx react-native run-ios`
+    5. Fix any errors (font bundles, pod installation, etc.)
+    6. Go to individual package instructions if needed
+6. Android
+    1. Move over `local.properties`
+    2. Move over `google-services.json to /app` (if applicable)
+    3. Move over `res` folder
+    4. Move over production `Keystore `
+    5. Update `gradle.properties`, `build.gradle`, `app/build.gradle`,  `AndroidManifest.xml`, `java files`
+    6. `npx react-native run-android`
+    7. Fix any errors
+7. Move over `.git directory` (hidden) from _temp copy
+8. To also update npm packages, check `Package Management w/NPM` section above
+9. Troubleshooting
+    1. `watchman watch-del-all`
+    2. `npm start --reset-cache`
+    3. Switch back to _temp copy when in doubt / if all else fails 
+
+
 ## Documentation
 
 -API method stubs with description, params, and return values
