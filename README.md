@@ -139,6 +139,19 @@ export default env;
 
 These are the most common JS concepts that you will see throughout any React or React-Native project.
 
+* (NEW!) Optional chaining
+```
+const adventurer = {
+  name: 'Alice',
+  cat: {
+    name: 'Dinah'
+  }
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// expected output: undefined
+```
 - (Fat) Arrow functions
 
 ```
