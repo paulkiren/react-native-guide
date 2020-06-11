@@ -710,6 +710,12 @@ Adding Custom Fonts:
 	- react-native-enhanced-popup-menu
 	- fluid transitions for react navigation
 	- Uppy: https://uppy.io//docs/react/native/
+	- https://github.com/FaridSafi/react-native-gifted-chat
+	- https://github.com/infinitered/ignite?
+	- https://callstack.github.io/react-native-paper/recommended-libraries.html
+	- https://github.com/rgommezz/react-native-offline
+	- https://github.com/Richi2293/rn-falcon-app-intro
+	- https://github.com/react-native-vietnam/react-native-search-box
 - Animation
 	- react-native-shared-element
 	- Pose
