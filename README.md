@@ -139,7 +139,8 @@ export default env;
 
 These are the most common JS concepts that you will see throughout any React or React-Native project.
 
-* (NEW!) Optional chaining
+- (NEW!) Optional chaining
+
 ```
 const adventurer = {
   name: 'Alice',
@@ -152,6 +153,7 @@ const dogName = adventurer.dog?.name;
 console.log(dogName);
 // expected output: undefined
 ```
+
 - (Fat) Arrow functions
 
 ```
@@ -347,39 +349,41 @@ My preferred tools for React-Native development:
 5. React Native Debugger will work like normal with the connected device
 
 ## 🐳 Debugging with Flipper
-* Facebook’s new mobile app debugger is called Flipper: https://fbflipper.com/
-* It replaces react-native-debugger/Reactotron for logging, crash reporting, viewing hooks state, and inspecting redux stores.
-	* It can also launch Android emulators easily without needing to launch Android Studio or using `adb` commands in Terminal
-* Flipper is automatically installed with React-Native 0.62+
-* For redux support, install `flipper-plugin-reduxinspector`: https://classic.yarnpkg.com/en/package/flipper-plugin-reduxinspector
-	* Install it via Flipper: View —> Manage Plugins… —> Install Plugins —> redux inspector —> install
-	* You can install other Flipper plugins this way too
-	* If Flipper doesn’t display redux stores: in the simulator close the app fully -> reopen it
+
+- Facebook’s new mobile app debugger is called Flipper: https://fbflipper.com/
+- It replaces react-native-debugger/Reactotron for logging, crash reporting, viewing hooks state, and inspecting redux stores. \* It can also launch Android emulators easily without needing to launch Android Studio or using `adb` commands in Terminal
+- Flipper is automatically installed with React-Native 0.62+
+- For redux support, install `flipper-plugin-reduxinspector`: https://classic.yarnpkg.com/en/package/flipper-plugin-reduxinspector
+  _ Install it via Flipper: View —> Manage Plugins… —> Install Plugins —> redux inspector —> install
+  _ You can install other Flipper plugins this way too \* If Flipper doesn’t display redux stores: in the simulator close the app fully -> reopen it
 
 ## 👥 FB-SDK
 
 **Setup + Install:**
-* Create FB app first: 
-* Install the package:
-* https://github.com/facebook/react-native-fbsdk
-* Follow the quickstarts:
-* https://developers.facebook.com/quickstarts
+
+- Create FB app first:
+- Install the package:
+- https://github.com/facebook/react-native-fbsdk
+- Follow the quickstarts:
+- https://developers.facebook.com/quickstarts
 
 Analytics:
+
 ```
 import { AppEventsLogger } from "react-native-fbsdk";
 AppEventsLogger.logPurchase(15, "USD", { param: "value" });
 AppEventsLogger.logEvent('battledAnOrc');
 ```
-* https://developers.facebook.com/docs/app-events/best-practices
-* https://developers.facebook.com/docs/react-native/app-events/
 
+- https://developers.facebook.com/docs/app-events/best-practices
+- https://developers.facebook.com/docs/react-native/app-events/
 
 **Testing:**
-* Test at: 
-* https://www.facebook.com/events_manager
-* And 
-* https://www.facebook.com/analytics
+
+- Test at:
+- https://www.facebook.com/events_manager
+- And
+- https://www.facebook.com/analytics
 
 ## 📈 Bash Scripts
 
@@ -435,8 +439,6 @@ Packages:
 
 Note: I now use redux-toolkit.
 
-
-
 - redux for global state management
   - https://github.com/reduxjs/redux
 - react-redux for react + redux bindings
@@ -465,19 +467,22 @@ Redux resources:
 - What is Redux? https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
 - Redux Crash Course With React by Traversy Media: https://www.youtube.com/watch?v=93p3LxR9xfM
 
-
 ### When to use redux?
+
 - use local state for data that doesn’t matter to the app globally
 - use redux for everything else
 - do whatever is less awkward and works for you
 
 ## why I used redux
+
 - pass state between components
 - for fetching data from API & storing it (eg. redux-saga or redux-thunk)
 - for storing forms (eg. redux form)
+
 ## when I dont use redux
+
 - use formik for forms: form data is local state, not a global store
-- when using Apollo or graphQL: data fetching from api's & REST  is less common place, especially now with apollo, graphql
+- when using Apollo or graphQL: data fetching from api's & REST is less common place, especially now with apollo, graphql
 - unstated or react context are really simple alternatives for smaller state
 - redux is still optional, available where it makes sense (ie. complex, very large, global state)
 
@@ -499,10 +504,13 @@ Other options:
 # Features
 
 ### ☀️ Light/Dark/Custom Theming
+
 useColorScheme: https://reactnative.dev/docs/usecolorscheme
 Appearance: https://reactnative.dev/docs/appearance
 
 ## 🎵 Push Notifications
+
+one signal
 
 ## 📼 Video Player
 
@@ -621,7 +629,7 @@ import com.reactnative.googlecast.GoogleCastPackage; to the imports at the top 
 
 Android build.grade:
 `castFrameworkVersion = '16.1.2'`
-  
+
 In android Manifest add:
 
 ```
@@ -650,8 +658,6 @@ public class MainActivity extends GoogleCastActivity {
 
 Not sure if this will work with react-navigation yet
 
-
-
 ## disable font accessibility scaling
 
 In App.js:
@@ -666,109 +672,94 @@ TextInput.defaultProps.allowFontScaling = false;
 ```
 
 Adding Custom Fonts:
-* https://github.com/facebook/react-native/issues/25852
+
+- https://github.com/facebook/react-native/issues/25852
 
 ## 🏙 Production Ready Packages
-- Modals: 
-	- ⭐️ react-native-modal, https://github.com/react-native-community/react-native-modal
-- IAP:
-	- ⭐️ react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases
-	- react-native-iap
-- Crash Reporting: 
-	- Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage
-	- BugSnag
-- Dynamic Links
-	- ⭐️ Firebase Dynamic Links
-	- Branch.io
-- Analytics
-	- ⭐️ Firebase Analytics
-- FB-SDK
-- Forms: 
-	- ⭐️ formik: https://github.com/jaredpalmer/formik
-	- react-hooks-form:
-- Push Notifcations
-	- ⭐️ OneSignal
-	- PushWoosh
-	- AWS service?
-- Forms
-	- Redux-form
-		- useful if you want to persist forms in a reducer!
-	- ⭐️ Formik
-	- ⭐️ react-hook-form
-- UI
-	- Native-Base: https://github.com/GeekyAnts/NativeBase
-	- react-native-splash-screen
-	- ⭐️ React Native Snap Carousel
-	- React Native Circular Progress
-	- Victory Native
-	- react-native-tab-view
-	- React-native-shared-elements
-		- react-navigation-shared-element instead?
-	- ⭐️ React-native-elements
-	- ⭐️ styled-components 
-	- ⭐️ expo action sheet 
-	- react-native-enhanced-popup-menu
-	- fluid transitions for react navigation
-	- Uppy: https://uppy.io//docs/react/native/
-	- https://github.com/FaridSafi/react-native-gifted-chat
-	- https://github.com/infinitered/ignite?
-	- https://callstack.github.io/react-native-paper/recommended-libraries.html
-	- https://github.com/rgommezz/react-native-offline
-	- https://github.com/Richi2293/rn-falcon-app-intro
-	- https://github.com/react-native-vietnam/react-native-search-box
-- Animation
-	- react-native-shared-element
-	- Pose
-	- Spring
-	- Animatable
-- Navigation
-	- ⭐️ react-navigation
-- Dates
-	- ⭐️ date-fns
-	- react-moment: https://github.com/headzoo/react-moment#readme
-- Embeddables
-	- react-native-intercom: https://github.com/tinycreative/react-native-intercom
-	- typeform:
-- Performance
-	- https://github.com/kimxogus/react-native-version-check
-	* ⭐️ React Native Fast Image (for image caching)
-* Redux
-	* ⭐️ Redux-toolkit
-	* ⭐️ Redux-persist
-* Video player
-	* ⭐️ react-native-video
-* Send intents/communication
-	* expo-sms
-	* react-native-send-intent
 
+### UI
+
+| First Header               | Second Header                        |
+| -------------------------- | ------------------------------------ |
+| react-navigation           | Navigation                           |
+| react-native-modal         | Content Cell                         |
+| styled-components          | Content Cell                         |
+| react-native-elements      | Content Cell                         |
+| react-native-snap-carousel | Content Cell                         |
+| react-native-bootsplash    | Content Cell                         |
+| react-native-make          | Generate platform-specific app icons |
+
+### Forms
+
+- Modals: - ⭐️ react-native-modal, https://github.com/react-native-community/react-native-modal
+- IAP: - ⭐️ react-native-purchased by RevenueCat, https://github.com/RevenueCat/react-native-purchases - react-native-iap
+- Crash Reporting: - Firebase Crashlytics, https://rnfirebase.io/crashlytics/usage - BugSnag
+- Dynamic Links - ⭐️ Firebase Dynamic Links - Branch.io
+- Analytics - ⭐️ Firebase Analytics
+- FB-SDK
+- Forms: - ⭐️ formik: https://github.com/jaredpalmer/formik - react-hooks-form:
+- Push Notifcations - ⭐️ OneSignal - PushWoosh - AWS service?
+- Forms - Redux-form - useful if you want to persist forms in a reducer! - ⭐️ Formik - ⭐️ react-hook-form
+- UI - Native-Base: https://github.com/GeekyAnts/NativeBase - react-native-splash-screen - ⭐️ React Native Snap Carousel - React Native Circular Progress - Victory Native - react-native-tab-view - React-native-shared-elements - react-navigation-shared-element instead? - ⭐️ React-native-elements - ⭐️ styled-components - ⭐️ expo action sheet - react-native-enhanced-popup-menu - fluid transitions for react navigation - Uppy: https://uppy.io//docs/react/native/ - https://github.com/FaridSafi/react-native-gifted-chat - https://github.com/infinitered/ignite? - https://callstack.github.io/react-native-paper/recommended-libraries.html - https://github.com/rgommezz/react-native-offline - https://github.com/Richi2293/rn-falcon-app-intro - https://github.com/react-native-vietnam/react-native-search-box
+- Animation - react-native-shared-element - Pose - Spring - Animatable
+- Navigation - ⭐️ react-navigation
+- Dates - ⭐️ date-fns - react-moment: https://github.com/headzoo/react-moment#readme
+- Embeddables - react-native-intercom: https://github.com/tinycreative/react-native-intercom - typeform:
+- Performance - https://github.com/kimxogus/react-native-version-check \* ⭐️ React Native Fast Image (for image caching)
+
+* Redux
+  _ ⭐️ Redux-toolkit
+  _ ⭐️ Redux-persist
+* Video player \* ⭐️ react-native-video
+* Send intents/communication
+  _ expo-sms
+  _ react-native-send-intent
+
+### Video Player
+
+| Package            | Description | Link |
+| ------------------ | ----------- | ---- |
+| react-native-video |             |      |
+|                    |             |      |
+
+### Redux
+
+| Package       | Description | Link |
+| ------------- | ----------- | ---- |
+| redux-toolkit |             |      |
+| redux-persist |             |      |
 
 ### Firebase Analytics
+
 1. Base setup
-    1. Follow instructions at https://rnfirebase.io/
-2. Install Analytics 
-    1. Guide at https://rnfirebase.io/analytics/usage
-    2. Setup tracking:
-* Setup Events with custom parameters reporting
-	* In firebase or google analytics, go to events -> highlight event —> press menu (3 dots) icon far right -> edit parameter reporting -> choose the parameter -> choose type text -> hit save
+   1. Follow instructions at https://rnfirebase.io/
+2. Install Analytics
+   1. Guide at https://rnfirebase.io/analytics/usage
+   2. Setup tracking:
+
+- Setup Events with custom parameters reporting \* In firebase or google analytics, go to events -> highlight event —> press menu (3 dots) icon far right -> edit parameter reporting -> choose the parameter -> choose type text -> hit save
 
 ### Cocoapods errors
-* Delete the offending npm package in package.json and node_modules
-* delete the Pods folder
-* Delete the pod lock file
-* npm install the packages again
-* pod install
+
+- Delete the offending npm package in package.json and node_modules
+- delete the Pods folder
+- Delete the pod lock file
+- npm install the packages again
+- pod install
 
 # Firebase dynamic links
 
 To clear cache:
-* Delete the app from the device
-    * Clear Safari web content, history and cookies (Settings > Safari > Clear History and Website Data)
-    * Reset the device's IDFA (Settings > Privacy > Advertising > Reset Advertising Identifier...)
+
+- Delete the app from the device
+  - Clear Safari web content, history and cookies (Settings > Safari > Clear History and Website Data)
+  - Reset the device's IDFA (Settings > Privacy > Advertising > Reset Advertising Identifier...)
 
 To make post request from server:
-* POST request docs:
-* https://firebase.google.com/docs/dynamic-links/rest
-* https://firebase.google.com/docs/reference/dynamic-links/link-shortener
+
+- POST request docs:
+- https://firebase.google.com/docs/dynamic-links/rest
+- https://firebase.google.com/docs/reference/dynamic-links/link-shortener
 
 ## Deep linking
 
@@ -779,14 +770,16 @@ Deep link launch, works with:
 
 - adb shell am start -a android.intent.action.VIEW -d "appname://pagename" com.appname
 
-
 # RN Update Process
-### Two choices: 
+
+### Two choices:
+
 1. Approach 1: Manual update using react-native-upgrade-helper
 2. Approach 2: Create new project, `npm install`, move individual platform files over
-	1. Currently, I prefer this approach. Manually updating tends to take almost the same amount of time, and I’ve always run into errors. 
+   1. Currently, I prefer this approach. Manually updating tends to take almost the same amount of time, and I’ve always run into errors.
 
 ### Approach 1: Manual update
+
 1. Go to https://react-native-community.github.io/upgrade-helper/
 2. Choose your to/from versions
 3. Follow the steps
@@ -794,32 +787,32 @@ Deep link launch, works with:
 5. Note that some updates are significantly harder to do this way than others. **Most times when doing a major update approach 2 will be easier!**
 
 ### Approach 2: Create new project and move over:
+
 1. Move current project directory to a temp directory
 2. `npx react-native init ProjectNameApp` in projects directory
 3. Move over `app.js`, `src` dir, and `package.json` dependencies (EXCEPT react and react-native!)
 4. `npm install`
 5. iOS setup:
-    1. Move over image assets and firebase config file (if applicable)
-    2. update `AppDelegate.m`, `Appdelegate.h` and `Podfile`
-    3. `cd iOS && npx pod install`
-    4. `npx react-native run-ios`
-    5. Fix any errors (font bundles, pod installation, etc.)
-    6. Go to individual package instructions if needed
+   1. Move over image assets and firebase config file (if applicable)
+   2. update `AppDelegate.m`, `Appdelegate.h` and `Podfile`
+   3. `cd iOS && npx pod install`
+   4. `npx react-native run-ios`
+   5. Fix any errors (font bundles, pod installation, etc.)
+   6. Go to individual package instructions if needed
 6. Android
-    1. Move over `local.properties`
-    2. Move over `google-services.json to /app` (if applicable)
-    3. Move over `res` folder
-    4. Move over production `Keystore `
-    5. Update `gradle.properties`, `build.gradle`, `app/build.gradle`,  `AndroidManifest.xml`, `java files`
-    6. `npx react-native run-android`
-    7. Fix any errors
-7. Move over `.git directory` (hidden) from _temp copy
+   1. Move over `local.properties`
+   2. Move over `google-services.json to /app` (if applicable)
+   3. Move over `res` folder
+   4. Move over production `Keystore`
+   5. Update `gradle.properties`, `build.gradle`, `app/build.gradle`, `AndroidManifest.xml`, `java files`
+   6. `npx react-native run-android`
+   7. Fix any errors
+7. Move over `.git directory` (hidden) from \_temp copy
 8. To also update npm packages, check `Package Management w/NPM` section above
 9. Troubleshooting
-    1. `watchman watch-del-all`
-    2. `npm start --reset-cache`
-    3. Switch back to _temp copy when in doubt / if all else fails 
-
+   1. `watchman watch-del-all`
+   2. `npm start --reset-cache`
+   3. Switch back to \_temp copy when in doubt / if all else fails
 
 ## Documentation
 
@@ -924,6 +917,7 @@ Virtual Real-Device testing:
 - iOS, Testflight
 
 # Release iOS and android app at same time
+
 1. Submit iOS app + App Store content to Apple with manual release
 2. Submit Android App Store content to Google with timed release
 3. Wait for Apple to approve iOS submission (typically 1-3 days, IAP makes it longer)
